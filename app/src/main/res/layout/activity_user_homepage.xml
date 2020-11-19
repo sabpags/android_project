@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserHomepage">
+
+    <TextView
+        android:id="@+id/welcomeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Welcome, {user}"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/newSearch"
+        android:layout_width="229dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="44dp"
+        android:text="New Search"
+        android:onClick="NewSearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeTitle" />
+
+    <Button
+        android:id="@+id/viewFavorites"
+        android:layout_width="229dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="44dp"
+        android:text="View Favorites"
+        android:onClick="ViewFavorites"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newSearch" />
+
+    <Button
+        android:id="@+id/viewProfile"
+        android:layout_width="229dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="44dp"
+        android:text="View Profile"
+        android:onClick="ViewProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewFavorites" />
+
+    <Button
+        android:id="@+id/viewRecent"
+        android:layout_width="229dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="44dp"
+        android:text="View Recent Searches"
+        android:onClick="ViewRecentSearches"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewProfile" />
+
+    <ListView
+        android:id="@+id/recentList"
+        android:layout_width="380dp"
+        android:layout_height="212dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewRecent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
